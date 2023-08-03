@@ -23,21 +23,27 @@ class ReversoConnection(ExperimentalBaseConnection[ReversoContextAPI]):
         )
 
     def instance(self) -> ReversoContextAPI:
+        """Retrieve the underlying connection object"""
         return self._instance
 
     def set_source_lang(self, source_lang: str) -> None:
+        """Set the source language (default: en)"""
         self._instance.source_lang = source_lang
 
     def set_target_lang(self, target_lang: str) -> None:
+        """Set the target language (default: fr)"""
         self._instance.target_lang = target_lang
 
     def set_source_text(self, source_text: str) -> None:
+        """Set the source text (default: I am awesome)"""
         self._instance.source_text = source_text
 
     def set_target_text(self, target_text: str) -> None:
+        """Set the target text (optional, default: None)"""
         self._instance.target_text = target_text
 
     def get_usage_translations(self, ttl: int = 3600) -> pd.DataFrame:
+        """Get multiple translations of the source text from a source language to a target language"""
         @cache_data(ttl=ttl)
         def _get_usage_translations() -> pd.DataFrame:
             instance = self.instance()
@@ -57,6 +63,7 @@ class ReversoConnection(ExperimentalBaseConnection[ReversoContextAPI]):
         return _get_usage_translations()
 
     def get_usage_examples(self, n_ex: int = 10, ttl: int = 3600) -> pd.DataFrame:
+        """Get usage examples of how to use the source & target texts in a sentence"""
         @cache_data(ttl=ttl)
         def _get_usage_examples(n_ex) -> pd.DataFrame:
             instance = self.instance()
@@ -76,6 +83,7 @@ class ReversoConnection(ExperimentalBaseConnection[ReversoContextAPI]):
         return _get_usage_examples(n_ex)
 
     def get_supported_langs(self, ttl: int = 3600) -> pd.DataFrame:
+        """Get all supported languages from source and target"""
         @cache_data(ttl=ttl)
         def _get_supported_langs() -> pd.DataFrame:
             supported_langs = {}
