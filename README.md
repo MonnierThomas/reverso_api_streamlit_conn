@@ -16,6 +16,7 @@
     Connections Hackathon
     <br />
     <a href="https://discuss.streamlit.io/t/connections-hackathon/47574"><strong>Explore the hackathon »</strong></a>
+    <a href="https://reverso-api-conn.streamlit.app/"><strong>Explore the app »</strong></a>
     <br />
     <br />
     <a href="https://reverso-api-conn.streamlit.app/">View Demo</a>
