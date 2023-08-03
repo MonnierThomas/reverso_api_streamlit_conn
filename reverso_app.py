@@ -60,6 +60,9 @@ def main():
             target_lang=target_lang,
         )
 
+        # Clear cache if any
+        st.cache_data.clear()
+
         st.session_state.is_connection = True
 
         # Get translations and usage examples
