@@ -46,11 +46,8 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -106,9 +103,9 @@ $- streamlit run reverso_app.py
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+This app builds a Streamlit connection to Reverso-API, a Python package built to retrieve translations and usage examples from a source text by specifying the source and target languages.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Reverso-API documentation](https://pypi.org/project/Reverso-API/)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
